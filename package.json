@@ -1,0 +1,16 @@
+{
+  "name": "proquot",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"pnpm --filter backend dev\" \"pnpm --filter frontend dev\"",
+    "build": "concurrently \"pnpm --filter backend build\" \"pnpm --filter frontend build\"",
+    "test": "concurrently \"pnpm --filter backend test\" \"pnpm --filter frontend test\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
